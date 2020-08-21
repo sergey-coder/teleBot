@@ -1,0 +1,5 @@
+56b30cb255.3443075
+https://api.gismeteo.net/v2/weather/current
+{"meta":{"message":"Invalid token. Check the 'X-Gismeteo-Token' header","code":401},"response":{}}
+
+https://api.gismeteo.net/v2/search/cities/?query=москв
