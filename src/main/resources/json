@@ -1,5 +1,46 @@
-56b30cb255.3443075
-https://api.gismeteo.net/v2/weather/current
-{"meta":{"message":"Invalid token. Check the 'X-Gismeteo-Token' header","code":401},"response":{}}
-
-https://api.gismeteo.net/v2/search/cities/?query=москв
+http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=135737d695fa1085ef39ec53ec182078
+https://samples.openweathermap.org/data/2.5/weather?q=" + siti + "&appid=" + appid + "&units=metric&lang=ru
+http://api.openweathermap.org/data/2.5/weather?q=новосибирск&APPID=135737d695fa1085ef39ec53ec182078&units=metric&lang=ru
+  "coord": {
+    "lon": -122.08,
+    "lat": 37.39
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 282.55,
+    "feels_like": 281.86,
+    "temp_min": 280.37,
+    "temp_max": 284.26,
+    "pressure": 1023,
+    "humidity": 100
+  },
+  "visibility": 16093,
+  "wind": {
+    "speed": 1.5,
+    "deg": 350
+  },
+  "clouds": {
+    "all": 1
+  },
+  "dt": 1560350645,
+  "sys": {
+    "type": 1,
+    "id": 5122,
+    "message": 0.0139,
+    "country": "US",
+    "sunrise": 1560343627,
+    "sunset": 1560396563
+  },
+  "timezone": -25200,
+  "id": 420006353,
+  "name": "Mountain View",
+  "cod": 200
+}

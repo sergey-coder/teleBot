@@ -1,47 +1,123 @@
 package ru.korotkov.bot;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 public class ModelWeather {
-    String strUrl = "https://meteoinfo.ru/forecasts/russia/novosibirsk-area";
-    StringBuilder content = new StringBuilder();
-//<a href="/statusmrf">			О статусе информации прогнозов на неделю		</a>
 
-    public static void main(String[] args) throws IOException {
-        String strUrl = "https://api.gismeteo.net/v2/weather/current/?latitude=54.35&longitude=52.52";
-        StringBuilder content = new StringBuilder();
-        final URL url = new URL(strUrl);
-        final HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod("GET");
-        final BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        while ((inputLine = in.readLine()) != null) {
-            System.out.println("Единичный елемент - " + in.readLine());
-           /* if(inputLine.equals("href")|| (inputLine.substring(inputLine.length()-4,inputLine.length()-1)).equals("</a>")){
+    private String main;
+    private String description;
+    private String icon;
+    private Double temp;
+    private Double feels_like;
+    private Double pressure;
+    private Double humidity;
+    private Double visibility;
+    private Double wind;
+    private Double clouds;
+    private Double rain;
+    private Double snow;
+    private String name;
 
-            }
-            content.append(inputLine);*/
-        }
-        in.close();
-        System.out.println(content.toString());
+    public String getMain() {
+        return main;
     }
 
-   /* public void getJsonMeteo() throws IOException {
-        final URL url = new URL(strUrl);
-        final HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod("GET");
-        final BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        while ((inputLine = in.readLine()) != null) {
-            content.append(inputLine);
-        }
-        in.close();
-        System.out.println(content.toString());
-    }*/
+    public void setMain(String main) {
+        this.main = main;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public Double getTemp() {
+        return temp;
+    }
+
+    public void setTemp(Double temp) {
+        this.temp = temp;
+    }
+
+    public Double getFeels_like() {
+        return feels_like;
+    }
+
+    public void setFeels_like(Double feels_like) {
+        this.feels_like = feels_like;
+    }
+
+    public Double getPressure() {
+        return pressure;
+    }
+
+    public void setPressure(Double pressure) {
+        this.pressure = pressure;
+    }
+
+    public Double getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(Double humidity) {
+        this.humidity = humidity;
+    }
+
+    public Double getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(Double visibility) {
+        this.visibility = visibility;
+    }
+
+    public Double getWind() {
+        return wind;
+    }
+
+    public void setWind(Double wind) {
+        this.wind = wind;
+    }
+
+    public Double getClouds() {
+        return clouds;
+    }
+
+    public void setClouds(Double clouds) {
+        this.clouds = clouds;
+    }
+
+    public Double getRain() {
+        return rain;
+    }
+
+    public void setRain(Double rain) {
+        this.rain = rain;
+    }
+
+    public Double getSnow() {
+        return snow;
+    }
+
+    public void setSnow(Double snow) {
+        this.snow = snow;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
